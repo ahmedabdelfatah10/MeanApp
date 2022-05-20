@@ -1,0 +1,9 @@
+
+<input [formControl]="control" [type]="type" class="" [placeholder]="placeholder"  class="input-btn"
+autocomplete="on"/>
+<ng-container *ngIf="control.dirty && control.errors">
+  <p class="p" *ngIf="control.errors.required">{{name}} is required</p>
+  <p class="p" *ngIf="control.errors.minlength">{{name}} must be of at least {{control.errors.minlength.requiredLength}} but the provided {{control.errors.minlength
+    .actualLength}}</p>
+   <p class="p" *ngIf="control.errors.pattern">{{name}} is not matched with pattern </p>
+</ng-container>

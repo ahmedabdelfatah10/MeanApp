@@ -1,0 +1,12 @@
+<div class="container">
+  <a routerLink="/"><h2>Goal Setter</h2></a>
+  <div class="div" *ngIf="!signedIn">
+    <a routerLink="/signin"><button class="submit-btn1">
+      Sign In </button></a>
+      <a routerLink="/signup"><button class="submit-btn1">
+        Sign Up </button></a>
+      </div>
+  <ng-container *ngIf="signedIn">
+  <button class="submit-btn1" (click)="handelSignOut()">Sign Out</button>
+  </ng-container>
+</div>

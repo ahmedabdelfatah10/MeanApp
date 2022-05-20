@@ -1,0 +1,21 @@
+
+<app-navbar></app-navbar>
+<div>
+  <h1>Welcome {{user}}
+  </h1>
+  <div class="container">
+    <input type="text" placeholder="Enter Your Goal" class="input-btn" [(ngModel)]="inputValue"/>
+    <button class="submit-btn" (click)="onCreate()">Enter</button>
+  </div>
+  <div class="goals">
+    <ng-container *ngFor="let goal of goals">
+      <div class="goal">
+      <h2>{{goal.text}}</h2>
+      <button (click)="onDelete(goal)" class="submit-btn1">Delete</button>
+      </div>
+    </ng-container>
+
+  </div>
+
+
+</div>

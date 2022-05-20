@@ -1,0 +1,52 @@
+
+  <div class="parent">
+    <div class="parent__logo">
+      <h1>Goal Setter</h1>
+    </div>
+    <div class="parent__form">
+      <div class="parent__form__header">
+        <h1>Sign Up</h1>
+        <p>Enter your credentials to continue</p>
+      </div>
+    <form class="parent__form__form" [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+        <label for="name">Username</label>
+        <app-input [control]="RegisterForm.get('name')" type="text" classname="input-btn"  placeholder="Enter your Name" name="name"></app-input>
+       <label for="email">Email</label>
+        <app-input [control]="RegisterForm.get('email')" type="email"  placeholder="Enter your Email"
+        name="email"> </app-input>
+        <label for="password">Password</label>
+        <app-input [control]="RegisterForm.get('password')" type="password"
+        placeholder="Enter your Password"
+        name="password"></app-input>
+        <label for="confirmPassword">Confirm password</label>
+        <app-input [control]="RegisterForm.get('confirmpassword')" type="password"
+        placeholder="confirm Password"
+        name="password" ></app-input>
+        <p>
+          By continuing you agree to our
+          <span style="color: #1682e8">Terms of Service</span> and
+          <span style="color: #1682e8">Privacy Policy</span>.
+        </p>
+        <h2 class="error">{{error}}</h2>
+        <input type="submit" value="Sign Up" class="submit-btn" />
+      </form>
+      <p class="signin">
+        Already have an account?<span
+
+            style="color: #1682e8; text-decoration: none"
+
+            >
+            <a routerLink="/signin"
+            style="color: #1682e8; text-decoration: none">Sign In</a>
+          </span
+        >
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+

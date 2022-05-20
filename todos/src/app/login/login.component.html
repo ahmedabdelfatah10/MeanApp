@@ -1,0 +1,36 @@
+
+  <div class="parent">
+    <div class="parent__logo">
+      <h1>Goal Setter</h1>
+    </div>
+    <div class="parent__form">
+      <div class="parent__form__header">
+        <h1>Log In</h1>
+        <p>Enter your emails and password</p>
+      </div>
+      <form class="parent__form__form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+        <label for="email">Email</label>
+        <app-input [control]="loginForm.get('email')" type="email"  placeholder="Enter your Email"
+        name="email"> </app-input>
+        <label for="password">Password</label>
+        <app-input [control]="loginForm.get('password')" type="password"
+        placeholder="Enter your Password"
+        name="password"></app-input>
+        <h2 class="error">{{error}}</h2>
+        <input type="submit" value="Log In" class="submit-btn" />
+      </form>
+
+      <p class="signin">
+        Don’t have an account?<span
+          >
+          <a routerLink="/signup"
+          style="color: #1682e8; text-decoration: none">
+            Sign Up
+          </a>
+          </span
+        >
+      </p>
+    </div>
+  </div>
+
+

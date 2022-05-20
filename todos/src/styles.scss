@@ -1,0 +1,137 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+  & .parent__logo {
+    display: flex;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+
+    & .logo__small {
+      width: 194px;
+      height: 55px;
+    }
+    & .logo__big {
+      display: none;
+    }
+  }
+
+  & .parent__form {
+    & .parent__form__header {
+      & h1 {
+        font-size: 26px;
+        color: #030303;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      & p {
+        font-size: 16px;
+        color: #7c7c7c;
+        font-family: 'Montserrat', sans-serif;
+      }
+    }
+
+    & .parent__form__form {
+      & label {
+        font-size: 16px;
+        color: #7c7c7c;
+        margin-top: 40px;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+      }
+      & .input-btn {
+        display: block;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #e2e2e2;
+        margin-top: 10px;
+        margin-bottom: 57px;
+        width: 100%;
+        color: #030303;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      & p {
+        font-size: 16px;
+        color: #7c7c7c;
+        margin-bottom: 40px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      & .submit-btn {
+        width: 100%;
+        height: 67px;
+        background-color: #2f93f0;;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+      }
+    }
+  }
+  & .signin {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  @media (min-width: 1200px) {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    gap: 50px;
+
+    & .parent__logo {
+      grid-column: 1/1;
+      background-color: #2f93f0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .logo__small {
+        display: none;
+      }
+      & .logo__big {
+        display: block;
+        width: 194px;
+        height: 55px;
+      }
+    }
+
+    & .parent__form {
+      max-width: 728px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+a{
+  text-decoration:none;
+}
+
+@media (min-width: 1200px) {
+  html,body{
+    height: 100vh;
+  }
+}
+
+.error{
+  font-size: 18px;
+  color: red;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
