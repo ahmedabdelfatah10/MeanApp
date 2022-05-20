@@ -21,13 +21,13 @@ export class AuthService {
   }
 
   signUp(form:any){
-    return this.http.post("http://localhost:6001/api/users",form).pipe(
+    return this.http.post("https://todos-application1.herokuapp.com/api/users",form).pipe(
       tap(()=>{this.signedIn$.next(true)})
      )
   }
 
   signIn(form:any){
-    return this.http.post("http://localhost:6001/api/users/login",form).pipe(
+    return this.http.post("https://todos-application1.herokuapp.com/api/users/login",form).pipe(
      tap(()=>{this.signedIn$.next(true)})
     )
   }
@@ -41,19 +41,19 @@ export class AuthService {
 
   createGoal(goal:any){
 
-    return this.http.post("http://localhost:6001/api/goals",{
+    return this.http.post("https://todos-application1.herokuapp.com/api/goals",{
       text:goal
     })
   }
 
   getGoals(){
-    return this.http.get("http://localhost:6001/api/goals");
+    return this.http.get("https://todos-application1.herokuapp.com/api/goals");
   }
   deleteGoal(id:string){
-    return this.http.delete("http://localhost:6001/api/goals/"+id)
+    return this.http.delete("https://todos-application1.herokuapp.com/api/goals/"+id)
   }
   getUser(){
-    return this.http.get("http://localhost:6001/api/users/me")
+    return this.http.get("https://todos-application1.herokuapp.com/api/users/me")
 
   }
 }
